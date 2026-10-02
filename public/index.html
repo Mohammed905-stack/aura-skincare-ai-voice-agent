@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#123d32" />
+  <title>Aria — Aura Skincare AI Voice Care</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient a1"></div><div class="ambient a2"></div>
+  <main class="shell">
+    <header class="hero">
+      <nav><div class="brand"><span class="mark">A</span><span>AURA SKINCARE</span></div><span class="pill">AI CUSTOMER CARE</span></nav>
+      <div class="hero-grid">
+        <section>
+          <p class="eyebrow">VOICE-FIRST CUSTOMER EXPERIENCE</p>
+          <h1>Meet <em>Aria.</em><br>Your skincare support, simplified.</h1>
+          <p class="lede">Ask naturally about orders, shipping, returns, cancellations and Aura policies. Aria listens, checks the right information and responds aloud.</p>
+          <div class="actions">
+            <button id="startBtn" class="primary"><span class="mic">●</span> Start Call</button>
+            <button id="endBtn" class="secondary" disabled>End Call</button>
+          </div>
+          <div class="state-row"><span id="stateDot" class="state-dot"></span><strong id="stateText">Ready</strong><span id="supportText">Microphone starts only when you click Start Call</span></div>
+        </section>
+        <aside class="aria-card">
+          <div class="orb"><span>ARIA</span></div>
+          <div><span class="online">● ONLINE</span><h3>Friendly. Accurate. Policy-aware.</h3><p>Browser voice + secure order lookup + AI reasoning.</p></div>
+        </aside>
+      </div>
+    </header>
+
+    <section class="workspace">
+      <div class="conversation panel">
+        <div class="panel-head"><div><span class="kicker">LIVE CALL</span><h2>Conversation</h2></div><button id="clearBtn" class="ghost">Clear</button></div>
+        <div id="transcript" class="transcript"><div class="empty"><div class="empty-icon">✦</div><h3>Aria is ready when you are</h3><p>Start a voice call, or use the text box below for quick testing.</p></div></div>
+        <form id="messageForm" class="composer"><input id="messageInput" autocomplete="off" placeholder="Try: Where is my order ORD-101?"/><button>Send</button></form>
+      </div>
+
+      <aside class="side-stack">
+        <section class="panel outcome-panel"><div class="panel-head"><div><span class="kicker">POST-CALL</span><h2>Structured outcome</h2></div><span id="outcomeBadge" class="status-badge">NOT STARTED</span></div><pre id="outcome">{
+  "resolution_status": "NOT_STARTED"
+}</pre></section>
+        <section class="panel orders-panel"><div class="panel-head"><div><span class="kicker">TOOL DATA</span><h2>Test orders</h2></div><span class="tool-chip">get_order_details()</span></div><div id="orders" class="orders"></div></section>
+      </aside>
+    </section>
+
+    <section class="features">
+      <div><span>01</span><h3>Voice conversation</h3><p>Browser speech recognition and spoken replies.</p></div>
+      <div><span>02</span><h3>Policy guardrails</h3><p>Returns, cancellation, COD and shipping rules enforced.</p></div>
+      <div><span>03</span><h3>Order tool</h3><p>Mock live order lookup with graceful invalid-ID handling.</p></div>
+      <div><span>04</span><h3>Call intelligence</h3><p>Chronological transcript and structured post-call JSON.</p></div>
+    </section>
+    <footer>Built for the Datastraw AI + Tech Intern assessment · Aura Skincare is a fictional brand</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
